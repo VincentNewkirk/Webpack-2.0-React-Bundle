@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -50,6 +51,7 @@ module.exports = {
   },
   plugins: [
     HtmlWebpackPluginConfig,
+    new DirectoryNamedWebpackPlugin(true),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
