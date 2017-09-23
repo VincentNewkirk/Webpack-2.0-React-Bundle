@@ -1,4 +1,5 @@
 import React from 'react';
+import './header.scss';
 
 export default () => (
   <div className='header'>
