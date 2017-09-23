@@ -1,8 +1,8 @@
 import React from 'react';
-import './header.scss';
+import './index.scss';
 
 export default () => (
   <div className='header'>
-    <h1>{'How You Doin?'}</h1>
+    <h1>{'Vincent Newkirk'}</h1>
   </div>
 );
