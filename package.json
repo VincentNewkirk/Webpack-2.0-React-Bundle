@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "start:dev": "webpack && npm start"
+    "start": "webpack-dev-server",
+    "start:dev": "webpack --watch"
   },
   "author": "Vincent Newkirk <vincentnewkirk@gmail.com> (https://github.com/VincentNewkirk)",
   "description": "",
@@ -14,10 +14,16 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
+    "nodemon-webpack-plugin": "^0.1.4",
     "webpack": "^3.6.0"
   },
   "dependencies": {
+    "babel-preset-react": "^6.24.1",
     "express": "^4.15.4",
-    "lodash": "^4.17.4"
+    "html-webpack-plugin": "^2.30.1",
+    "lodash": "^4.17.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack-dev-server": "^2.8.2"
   }
 }
