@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -36,10 +37,21 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'eslint-loader',
       },
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: 'style-loader', // creates style nodes from JS strings
+        }, {
+          loader: 'css-loader', // translates CSS into CommonJS
+        }, {
+          loader: 'sass-loader', // compiles Sass to CSS
+        }],
+      },
     ],
   },
   plugins: [
     HtmlWebpackPluginConfig,
+    new DirectoryNamedWebpackPlugin(true),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),

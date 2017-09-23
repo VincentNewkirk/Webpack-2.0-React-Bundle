@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Header from './components/header';
+import App from './app';
 
 // eslint-disable-next-line no-undef
-render(<Header />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
