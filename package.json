@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --hot",
     "start:dev": "webpack --watch"
   },
   "author": "Vincent Newkirk <vincentnewkirk@gmail.com> (https://github.com/VincentNewkirk)",
