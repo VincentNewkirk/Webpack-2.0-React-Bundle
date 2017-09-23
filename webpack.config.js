@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -8,6 +9,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = {
+  devtool: 'eval-source-map',
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -34,5 +36,12 @@ module.exports = {
   },
   plugins: [
     HtmlWebpackPluginConfig,
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.DefinePlugin({
+      // DEFINE GLOBAL VARS HERE
+      'process.env.NODE_ENV': JSON.stringify('development'),
+    }),
   ],
 };

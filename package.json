@@ -21,6 +21,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.3.0",
     "nodemon-webpack-plugin": "^0.1.4",
+    "redux-devtools": "^3.4.0",
     "webpack": "^3.6.0"
   },
   "dependencies": {
@@ -29,6 +30,8 @@
     "lodash": "^4.17.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
     "webpack-dev-server": "^2.8.2"
   }
 }
