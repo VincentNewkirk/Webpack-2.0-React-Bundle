@@ -1,0 +1,19 @@
+{
+  "name": "test-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Vincent Newkirk <vincentnewkirk@gmail.com> (https://github.com/VincentNewkirk)",
+  "description": "",
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "lodash": "^4.17.4"
+  }
+}
